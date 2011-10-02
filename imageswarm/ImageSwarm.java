@@ -24,7 +24,7 @@ public class ImageSwarm extends PApplet {
 		int wid = 600, hei = 600;
 		
 		basePath = "/Users/hari/Work/code/ImageSwarm/src/data/Vangogh/";
-		fname = "Starry_Night.jpg";
+		fname = "Starry_Night_Over_the_Rhone.jpg";
 		PImage img = loadImage(basePath + fname);
 		
 		if (img.width > img.height) {
@@ -41,11 +41,11 @@ public class ImageSwarm extends PApplet {
 		
 		swarm = new PixieSwarm(this, img);
 		img.loadPixels();
-		for (float i = 0; i < img.width; i += 0.5) {
+		for (float i = 0; i < img.width; i += 0.25) {
 			swarm.add(new Pixies(new Vec2D(i, 0), new Vec2D(0, 2f), 0.1f, 1, 0.1f, img.pixels[(int) i]));
 		}
 		
-		strokeWeight(0.5f);
+		strokeWeight(0.25f);
 		background(0);
 		
 		st = System.nanoTime();
@@ -61,7 +61,7 @@ public class ImageSwarm extends PApplet {
 			exit();
 		}
 		
-		if ((st - System.nanoTime()) >= 1000000000) {
+		if ((st - System.nanoTime()) >= 1000000) {
 			println(swarm.size());
 			st = System.nanoTime();
 		}

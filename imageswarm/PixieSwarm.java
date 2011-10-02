@@ -62,8 +62,8 @@ public class PixieSwarm extends ArrayList<Pixies> {
 			c1.setARGB(pixels[(int) (Math.floor(p.position.y) * image.width + Math.floor(p.position.x))]);
 			
 			// Drift behaviour
-			steer = new Vec2D((c1.saturation() - p.color.saturation()), (float) (c1.hue() * Math.PI * 2.0)).toCartesian();
-//			steer = new Vec2D((p.color.saturation() - c1.saturation()), (float) (c1.hue() * Math.PI * 2.0)).toCartesian();
+//			steer = new Vec2D((c1.saturation() - p.color.saturation()), (float) (c1.hue() * Math.PI * 2.0)).toCartesian();
+			steer = new Vec2D((p.color.saturation() - c1.saturation()), (float) (c1.hue() * Math.PI * 2.0)).toCartesian();
 			
 			p.color.setARGB(c1.toARGB());
 			p.update(steer);
