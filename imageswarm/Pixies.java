@@ -16,7 +16,7 @@ import toxi.geom.Vec2D;
  */
 public class Pixies {
 	Vec2D position, lastposition, velocity, acceleration;
-	float mass, maxforce, maxspeed,maxacceleration = 0.5f;
+	float mass, maxforce, maxspeed,maxacceleration = 1f;
 	TColor color;
 	
 	Pixies(Vec2D pos, Vec2D vel, float m, float ms, float mf, int c) {

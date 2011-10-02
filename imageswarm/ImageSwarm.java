@@ -24,7 +24,7 @@ public class ImageSwarm extends PApplet {
 		int wid = 600, hei = 600;
 		
 		basePath = "/Users/hari/Work/code/ImageSwarm/src/data/Vangogh/";
-		fname = "Starry_Night_Over_the_Rhone.jpg";
+		fname = "Bedroom_Arles.jpg";
 		PImage img = loadImage(basePath + fname);
 		
 		if (img.width > img.height) {
@@ -61,7 +61,7 @@ public class ImageSwarm extends PApplet {
 			exit();
 		}
 		
-		if ((st - System.nanoTime()) >= 1000000) {
+		if ((System.nanoTime() - st) >= 5000000000l) {
 			println(swarm.size());
 			st = System.nanoTime();
 		}
