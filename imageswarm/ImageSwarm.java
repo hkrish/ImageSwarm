@@ -24,7 +24,7 @@ public class ImageSwarm extends PApplet {
 		int wid = 600, hei = 600;
 		
 		basePath = "/Users/hari/Work/code/ImageSwarm/src/data/Vangogh/";
-		fname = "Bedroom_Arles.jpg";
+		fname = "Vincent_Van_Gogh_0013.jpg";
 		PImage img = loadImage(basePath + fname);
 		
 		if (img.width > img.height) {
